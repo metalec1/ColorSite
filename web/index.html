@@ -9,8 +9,155 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript" src="siteUI.js"></script>
+        <link href="siteCSS.css" rel="stylesheet" type="text/css" />
+        
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="header">
+            <!--
+            <div id="logo">
+                <img src = "slike_oblika/Ascolor_logo.png" />
+            </div>
+            -->
+            <div id ="headerBtnsContainer">
+                <!--
+                <div id="lokacija" class="headerBtns">
+                    lokacija
+                </div>
+                -->
+                <div id="izdelki" class="headerBtns" style="cursor: pointer;">
+                    izdelki
+                </div>
+                
+                <div id="o_nas" class="headerBtns" style="cursor: pointer;" >
+                    o nas
+                </div>
+                
+                <div  id="domov" class="headerBtns" style="cursor: pointer;">
+                    domov
+                </div>
+            </div>
+        </div>
+        <div id="container"  >
+            
+            
+           
+            <div id="slika">
+                
+                
+            </div>
+            <div id="neki">
+                <div id="opis">
+                    <div id="logo">
+                        <img src = "slike_oblika/Ascolor_logo.png" />
+                    </div>
+                    <div id="besedilo">
+                        
+                        
+                        Vabljeni v trgovino Ascolor, kjer vam lahko ponudimo bogato ponudbo ličarskega in avtoličarskega materiala, industrijskih barv, avtokozmetike, barv za plovila, antivegetativne premaze, opremo za avtoličarje blagovnih znamk: Sikkens, De beer (valspar) 3M, Silco, Novol, 4CR, Konem color, Nautix, Yachticon, Rupes, Sata, Devilbiss ter mnoge druge.<br>
+                        <br>
+                        Trgovina Ascolor se nahaja v neposredni bližini Radia Capris in Rižanskega vodovoda na Ulici 15 maja. Torej, če potrebujete barve in se nahajate v Kopru, potem je trgovina z barvami Ascolor prava lokacija za vse vaše potrebe.
+                    </div>
+                </div>
+                <div id="okvirGumbov">
+                    <div id ="gumbi">
+                
+                
+                        <div id="izdelki" class="index_btns">
+                            izdelki
+                        </div>
+
+                        <div id="kontakt" class="index_btns">
+                            kontaktirajte nas
+                        </div>
+               
+                    </div>
+                </div>
+            </div>
+            <div id="mapa">
+                <div id="map">          
+                </div>
+                <div id="pano">
+                </div>
+            </div>
+            
+            <script>
+      function initMap() {
+          var fenway = {lat: 45.5370352, lng: 13.7318835};
+          var zgradba = {lat: 45.5375011, lng: 13.7321571};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: fenway,
+          zoom: 17
+        });
+      
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Ascolor</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>"AMACAR"</b>, Aljoša Jakomin s.p. <b></b><br> ' +
+            'Ulica 15 maja 12 h<br> '+
+            '6000 Koper / Capodistria <br>'+
+            'M: 0590 90900 <br>'+
+            'E: info@barvekoper.si <br></p>'+
+            /*
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            */
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          
+          position: zgradba,
+          map: map
+          
+            /*
+            title: 'Uluru (Ayers Rock)'
+            */
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: fenway,marker,
+              pov: {
+                heading: 34,
+                pitch: 10
+              }
+            });
+        map.setStreetView(panorama);
+
+          /*
+        var uluru = {lat: 45.5370352, lng: 13.7318835};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        */
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3HWRxdse8zV1lc6vdg7VGsSYIGLFESg&libraries=places&callback=initMap">
+    </script>
+
+           
+        </div>
+         <div id="triangle-topleft">
+                
+            </div>
     </body>
 </html>

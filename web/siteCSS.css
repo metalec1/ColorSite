@@ -1,0 +1,241 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 23, 2017, 4:26:42 PM
+    Author     : deni
+*/
+
+html,body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+     background-image: url("slike_oblika/ascolors-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+#header{
+    width:100%;
+    /*
+    overflow:auto;
+    */
+    position:fixed;
+    background-color: #27272d;
+    padding:5px;
+    /*
+     z-index:1000;
+    */
+    z-index: 1000;
+}
+#headerBtnsContainer{
+    float:right;
+    vertical-align: middle;
+    margin-right: 200px;
+    background-color: transparent;
+    display: table-cell;
+   
+}
+
+.headerBtns{
+    border-style: solid;
+    border-color: transparent;
+    height:100%;
+    padding: 3px;
+    margin-right: 10px;
+    float:right;
+    font-size: 185%;
+    color:white;
+    
+    
+    
+    
+    /*
+    position:relative;
+    */
+    background: transparent;
+    -webkit-transition: background 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: background 0.3s;
+}
+
+.headerBtns:hover{
+    background: #4ea3d8;
+}
+#domov{
+    background:#4ea3d8;
+}
+#opis img 
+{
+    
+    
+  display: table;
+  margin: 0 auto;
+  padding-top:20px;
+    /*
+ float:left;
+ max-height: 50px;
+ */
+ background-color: transparent;
+}
+#container {
+    padding-top: 60px;
+    width:100%;
+    /*
+    height:90%;
+    */
+    /*
+    background-image: url('slike_oblika/ascolors-background.jpg');
+    */
+    background-color:transparent ;
+}
+#slika{
+    width:100%;
+    height:100px;
+    background-color: transparent;
+}
+#neki{
+    width:100%;
+    
+    background-color: transparent;
+    }
+#opis{
+width:95%;
+background-color: #27272d;
+color:white;
+/*
+    border-radius: 2em;
+*/
+border-bottom: 8px solid #4ea3d8;
+
+border-bottom-right-radius: 30em;
+}
+#naslov{
+   font-size: 200%; 
+   text-align: center;
+}
+#besedilo{
+    padding-top:1%;
+    padding-left:5%;
+    padding-bottom:2%;
+    font-size: 150%;
+    width:70%;
+  /*  
+    background:rgba(255,255,255,0.5);
+*/
+    }
+#okvirGumbov{
+    width:100%;
+    background-color: transparent;
+    
+}
+#gumbi{
+    
+    /*
+    float:left;
+    margin-top:5%;
+    margin-left:30%;
+    */
+    padding: 3%;
+    
+     display: table;
+  margin: 0 auto;
+    background-color: transparent;
+    
+    
+}
+.index_btns{
+    /*main buttons, image inside, text over*/
+    /*
+    barve , zelena -25c643
+    *//*
+    
+      border-radius: 10px;
+    */
+      border-top-left-radius: 15em;
+      border-bottom-right-radius: 15em;
+    height:150px;
+    min-width:300px;
+    color:white;
+    width:30%;
+    /*
+    padding:30px;
+    background-color: #828589;
+    background-color: #27272d;
+    
+    */
+    font-size: 200%;
+    margin:1px;
+    background-color: #27272d;
+    float: left;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    /*
+    border: 2px solid #25c643; ali black
+    border-bottom: 8px solid #5ab22b;
+    border-bottom: 8px solid #4ea3d8; -- modra
+    border-bottom: 8px solid purple;
+    */
+    border-bottom: 8px solid #4ea3d8;
+    
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, #4ea3d8 50%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+
+}
+.index_btns:hover{ /*main buttons, image inside, text over*/
+    /* background:#25c643;
+    */
+    border-color: #4ea3d8;
+    background-image: 
+        linear-gradient(to top, #4ea3d8 51%, transparent 50%);
+    background-position: 0 100%;
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    /*
+ -webkit-transition: background-color 700ms linear;
+  -ms-transition: background-color 700ms linear;
+  transition: background-color 700ms linear;*/
+}
+#mapa{
+    padding-top: 30px;
+    width:100%;
+    height:500px;
+    border-radius: 5em;
+    background-color: transparent;
+}
+#map{
+    /*
+    border-top-left-radius: 1em;
+    */
+    height: 100%;
+    width: 50%;
+    float:left;
+
+}
+#pano{
+    /*
+     border-top-right-radius: 1em;
+     */
+    height: 100%;
+    width: 50%;
+    float:left;
+    
+}
